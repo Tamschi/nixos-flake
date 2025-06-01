@@ -41,9 +41,20 @@
     xkbVariant = "intl";
   };
 
-  # Enable sound
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # Configure ALSA for sound
+  hardware.alsa.enable = true;
+
+  # Use systemd-boot instead of GRUB
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # Resolve conflict between PipeWire and PulseAudio
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
 
   # Enable power management
   powerManagement.enable = true;
