@@ -28,10 +28,17 @@
     ibus.engines = [ "xkb:us::eng" "xkb:de::ger" ];
   };
 
-  i18n.keyboardLayout = {
-    model = "pc105";
+  # Set the keyboard layout for the console
+  console.keymap = {
     layout = "us";
-    variant = "intl"; # Enables typing umlauts and other special characters
+    model = "pc105";
+    variant = "intl";
+  };
+
+  # Set the keyboard layout for the X server
+  services.xserver = {
+    layout = "us";
+    xkbVariant = "intl";
   };
 
   # Enable sound
