@@ -94,7 +94,7 @@
     RuntimeMaxUse=200M
   '';
 
-  fonts.fonts = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk-sans noto-fonts-emoji ];
+  fonts.packages = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk-sans noto-fonts-emoji ];
 
   system.stateVersion = "24.05";
 }
