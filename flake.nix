@@ -8,7 +8,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, nushell }: {
+  outputs = { self, nixpkgs, nushell }: let
+    pkgs = import nixpkgs { system = "x86_64-linux"; };
+  in {
     nixosConfigurations = {
       hostname = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
