@@ -63,9 +63,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable hardware acceleration for video playback (Intel)
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+  hardware.graphics.extraPackages = with pkgs; [
     vaapiIntel
     vaapiVdpau
     libvdpau-va-gl
