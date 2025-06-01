@@ -27,6 +27,9 @@
   # Enable power management
   powerManagement.enable = true;
 
+  # Enable the firewall
+  networking.firewall.enable = true;
+
   # User configuration
   users.users.ts = {
     isNormalUser = true;
