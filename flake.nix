@@ -24,9 +24,7 @@
 
             # Set system packages
             environment.systemPackages = with pkgs; [
-              nano # Replacing vim with nano as the text editor
-              git
-              starship
+              nano git starship htop curl wget unzip file
             ];
 
             # Configure basic settings
@@ -113,9 +111,18 @@
               enable = true;
             };
 
+            programs.motd.enable = true;
+            programs.motd.text = "Welcome to Teclast-X4 NixOS!";
+
             users.defaultUserShell = pkgs.nushell;
 
             system.stateVersion = "24.05";
+
+            nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+            security.apparmor.enable = true;
+
+            services.tlp.enable = true;
           })
         ];
       };
