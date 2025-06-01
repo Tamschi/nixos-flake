@@ -34,6 +34,8 @@
             # Set the default locale
             i18n.defaultLocale = "en_GB.UTF-8";
 
+            i18n.supportedLocales = [ "en_GB.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
+
             # Set the keyboard layout for the console
             console.keyMap = "us";
 
@@ -104,6 +106,7 @@
               SystemMaxUse=500M
               RuntimeMaxUse=200M
             '';
+            services.journald.persistLog = true;
 
             fonts.packages = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk-sans noto-fonts-emoji ];
 
@@ -121,6 +124,21 @@
             security.apparmor.enable = true;
 
             services.tlp.enable = true;
+
+            nix.daemon.enable = true;
+
+            documentation.nixos.enable = true;
+            documentation.man.enable = true;
+            documentation.info.enable = true;
+
+            services.flatpak.enable = true;
+
+            services.printing.enable = true;
+
+            services.avahi.enable = true;
+            services.avahi.nssmdns = true;
+
+            services.fstrim.enable = true;
           })
         ];
       };
