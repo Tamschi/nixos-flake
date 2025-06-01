@@ -24,7 +24,7 @@
   i18n.defaultLocale = "en_GB.UTF-8";
 
   # Set the keyboard layout for the console
-  console.keyMap = "us-intl";
+  console.keyMap = "us";
 
   # Set the keyboard layout for the X server
   services.xserver.xkb = {
