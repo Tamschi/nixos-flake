@@ -20,6 +20,9 @@
   time.timeZone = "UTC";
   networking.hostName = "hostname";
 
+  # Set the default locale
+  i18n.defaultLocale = "en_GB.UTF-8";
+
   # Enable sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
