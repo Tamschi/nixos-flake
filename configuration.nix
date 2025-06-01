@@ -27,9 +27,9 @@
   console.keyMap = "us-intl";
 
   # Set the keyboard layout for the X server
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "intl";
+    variant = "intl";
   };
 
   # Configure PipeWire as the sole sound server
