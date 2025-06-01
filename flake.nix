@@ -3,12 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nushell = {
-      url = "github:nushell/nushell";
-    };
   };
 
-  outputs = { self, nixpkgs, nushell }: let
+  outputs = { self, nixpkgs }: let
     pkgs = import nixpkgs { system = "x86_64-linux"; };
   in {
     nixosConfigurations = {
@@ -18,7 +15,6 @@
           ./configuration.nix
           {
             environment.systemPackages = with pkgs; [
-              nushell
               starship
             ];
 
