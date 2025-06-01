@@ -29,11 +29,7 @@
   };
 
   # Set the keyboard layout for the console
-  console.keyMap = {
-    layout = "us";
-    model = "pc105";
-    variant = "intl";
-  };
+  console.keyMap = "us-intl";
 
   # Set the keyboard layout for the X server
   services.xserver = {
