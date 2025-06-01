@@ -106,7 +106,6 @@
               SystemMaxUse=500M
               RuntimeMaxUse=200M
             '';
-            services.journald.persistLog = true;
 
             fonts.packages = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk-sans noto-fonts-emoji ];
 
