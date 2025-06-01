@@ -153,6 +153,10 @@
             nix.settings.sandbox = true;
 
             services.resolved.enable = true;
+
+            services.smartd.enable = true;
+
+            nix.settings.build-users-group = "nixbld";
           })
         ];
       };
