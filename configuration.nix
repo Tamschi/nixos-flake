@@ -23,4 +23,15 @@
   # Enable sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+
+  # User configuration
+  users.users.ts = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Grants sudo privileges
+  };
+
+  users.users.qz = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Grants sudo privileges
+  };
 }
