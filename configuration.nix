@@ -23,6 +23,17 @@
   # Set the default locale
   i18n.defaultLocale = "en_GB.UTF-8";
 
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = [ "xkb:us::eng" "xkb:de::ger" ];
+  };
+
+  i18n.keyboardLayout = {
+    model = "pc105";
+    layout = "us";
+    variant = "intl"; # Enables typing umlauts and other special characters
+  };
+
   # Enable sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
