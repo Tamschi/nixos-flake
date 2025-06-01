@@ -125,8 +125,6 @@
 
             services.tlp.enable = true;
 
-            nix.daemon.enable = true;
-
             documentation.nixos.enable = true;
             documentation.man.enable = true;
             documentation.info.enable = true;
