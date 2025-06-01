@@ -72,5 +72,10 @@
     intel-media-driver
   ];
 
+  # Enable automatic garbage collection
+  nix.gc.automatic = true;
+  nix.gc.dates = "weekly";
+  nix.gc.options = "--delete-older-than 7d";
+
   system.stateVersion = "24.05";
 }
