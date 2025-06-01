@@ -22,7 +22,7 @@
 
             programs.starship = {
               enable = true;
-              promptOrder = [ "username", "hostname", "directory", "git_branch" ];
+              promptOrder = [ "username" "hostname" "directory" "git_branch" ];
             };
 
             users.defaultUserShell = pkgs.nushell;
