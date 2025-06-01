@@ -107,7 +107,14 @@
               RuntimeMaxUse=200M
             '';
 
-            fonts.packages = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk-sans noto-fonts-emoji ];
+            fonts.packages = with pkgs; [
+              dejavu_fonts
+              noto-fonts
+              noto-fonts-cjk-sans
+              noto-fonts-emoji
+              liberation_ttf
+              source-han-sans
+            ];
 
             programs.starship = {
               enable = true;
@@ -136,6 +143,14 @@
             services.avahi.nssmdns = true;
 
             services.fstrim.enable = true;
+
+            services.oomd.enable = true;
+
+            nix.settings.auto-optimise-store = true;
+
+            hardware.bluetooth.enable = true;
+
+            services.udev.packages = [ pkgs.libu2f-host pkgs.libu2f-server ];
           })
         ];
       };
