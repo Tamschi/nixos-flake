@@ -23,11 +23,6 @@
   # Set the default locale
   i18n.defaultLocale = "en_GB.UTF-8";
 
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = [ "xkb:us::eng" "xkb:de::ger" ];
-  };
-
   # Set the keyboard layout for the console
   console.keyMap = "us-intl";
 
