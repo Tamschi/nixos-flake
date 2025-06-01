@@ -144,8 +144,6 @@
 
             services.fstrim.enable = true;
 
-            services.oomd.enable = true;
-
             nix.settings.auto-optimise-store = true;
 
             hardware.bluetooth.enable = true;
