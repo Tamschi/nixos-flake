@@ -33,7 +33,6 @@
 
             # Set the default locale
             i18n.defaultLocale = "en_GB.UTF-8";
-
             i18n.supportedLocales = [ "en_GB.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
 
             # Set the keyboard layout for the console
@@ -131,10 +130,6 @@
 
             services.tlp.enable = true;
 
-            documentation.nixos.enable = true;
-            documentation.man.enable = true;
-            documentation.info.enable = true;
-
             services.flatpak.enable = true;
 
             services.printing.enable = true;
@@ -150,13 +145,9 @@
 
             services.udev.packages = [ pkgs.libu2f-host pkgs.libu2f-server ];
 
-            nix.settings.sandbox = true;
-
             services.resolved.enable = true;
 
             services.smartd.enable = true;
-
-            nix.settings.build-users-group = "nixbld";
           })
         ];
       };
