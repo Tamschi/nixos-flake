@@ -41,18 +41,12 @@
     xkbVariant = "intl";
   };
 
-  # Configure ALSA for sound
-  hardware.alsa.enable = true;
-
-  # Use systemd-boot instead of GRUB
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Resolve conflict between PipeWire and PulseAudio
+  # Configure PipeWire as the sole sound server
   services.pulseaudio.enable = false;
+  hardware.alsa.enable = false;
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
+    alsa.enable = false;
     pulse.enable = true;
   };
 
@@ -72,6 +66,10 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Grants sudo privileges
   };
+
+  # Use systemd-boot instead of GRUB
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   system.stateVersion = "24.05";
 }
