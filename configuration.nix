@@ -29,7 +29,7 @@
   };
 
   # Set the keyboard layout for the console
-  console.keymap = {
+  console.keyMap = {
     layout = "us";
     model = "pc105";
     variant = "intl";
