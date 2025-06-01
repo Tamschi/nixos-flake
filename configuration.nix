@@ -12,7 +12,7 @@
 
   # Set system packages
   environment.systemPackages = with pkgs; [
-    vim
+    nano # Replacing vim with nano as the text editor
     git
   ];
 
