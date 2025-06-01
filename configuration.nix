@@ -24,6 +24,9 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # Enable power management
+  powerManagement.enable = true;
+
   # User configuration
   users.users.ts = {
     isNormalUser = true;
