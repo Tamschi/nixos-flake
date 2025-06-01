@@ -18,7 +18,7 @@
 
   # Configure basic settings
   time.timeZone = "UTC";
-  networking.hostName = "hostname";
+  networking.hostName = "Teclast-X4";
 
   # Set the default locale
   i18n.defaultLocale = "en_GB.UTF-8";
