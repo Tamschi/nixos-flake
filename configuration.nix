@@ -61,4 +61,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Grants sudo privileges
   };
+
+  system.stateVersion = "24.05";
 }
