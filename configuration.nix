@@ -86,7 +86,7 @@
   services.timesyncd.enable = true;
 
   # Enable zram swap
-  swap.zram.enable = true;
+  zramSwap.enable = true;
 
   # Journal configuration
   services.journald.extraConfig = ''
