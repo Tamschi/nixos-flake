@@ -135,7 +135,6 @@
             services.printing.enable = true;
 
             services.avahi.enable = true;
-            services.avahi.nssmdns4 = true;
 
             services.fstrim.enable = true;
 
@@ -144,8 +143,6 @@
             hardware.bluetooth.enable = true;
 
             services.udev.packages = [ pkgs.libu2f-host pkgs.libu2f-server ];
-
-            services.resolved.enable = true;
 
             services.smartd.enable = true;
           })
