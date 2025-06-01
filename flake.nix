@@ -111,9 +111,7 @@
               enable = true;
             };
 
-            programs.motd.enable = true;
-            programs.motd.text = "Welcome to Teclast-X4 NixOS!";
-
+            # Set the default shell for users
             users.defaultUserShell = pkgs.nushell;
 
             system.stateVersion = "24.05";
