@@ -46,6 +46,7 @@
 
   # Enable the firewall
   networking.firewall.enable = true;
+  networking.firewall.logRefusedConnections = true;
 
   # User configuration
   users.users.ts = {
@@ -76,6 +77,24 @@
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 7d";
+
+  # Set environment variables
+  environment.variables.EDITOR = "nano";
+  environment.variables.PAGER = "less";
+
+  # Enable systemd-timesyncd for time synchronization
+  services.timesyncd.enable = true;
+
+  # Enable zram swap
+  swap.zram.enable = true;
+
+  # Journal configuration
+  services.journald.extraConfig = ''
+    SystemMaxUse=500M
+    RuntimeMaxUse=200M
+  '';
+
+  fonts.fonts = with pkgs; [ dejavu_fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ];
 
   system.stateVersion = "24.05";
 }
