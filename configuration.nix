@@ -1,1 +1,0 @@
-# configuration.nix merged into flake.nix. This file is now empty.
