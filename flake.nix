@@ -149,6 +149,10 @@
             hardware.bluetooth.enable = true;
 
             services.udev.packages = [ pkgs.libu2f-host pkgs.libu2f-server ];
+
+            nix.settings.sandbox = true;
+
+            services.resolved.enable = true;
           })
         ];
       };
