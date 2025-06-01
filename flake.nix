@@ -9,7 +9,7 @@
     pkgs = import nixpkgs { system = "x86_64-linux"; };
   in {
     nixosConfigurations = {
-      hostname = nixpkgs.lib.nixosSystem {
+      "Teclast-X4" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
