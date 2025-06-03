@@ -63,12 +63,12 @@
             # User configuration
             users.users.ts = {
               isNormalUser = true;
-              extraGroups = [ "wheel" ]; # Grants sudo privileges
+              extraGroups = [ "wheel" "kvm" "libvirtd" ]; # Added KVM groups
             };
 
             users.users.qz = {
               isNormalUser = true;
-              extraGroups = [ "wheel" ]; # Grants sudo privileges
+              extraGroups = [ "wheel" "kvm" "libvirtd" ]; # Added KVM groups
             };
 
             # Use systemd-boot instead of GRUB
@@ -145,6 +145,14 @@
             services.udev.packages = [ pkgs.libu2f-host pkgs.libu2f-server ];
 
             services.smartd.enable = true;
+
+            # Enable KVM support
+            virtualisation.libvirtd.enable = true;
+            virtualisation.libvirtd.qemu.package = pkgs.qemu_kvm;
+            virtualisation.libvirtd.qemu.runAsRoot = true;
+
+            # Add KVM-related kernel modules
+            boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
           })
         ];
       };
