@@ -24,7 +24,7 @@
 
             # Set system packages
             environment.systemPackages = with pkgs; [
-              nano git starship htop curl wget unzip file
+              nano git starship htop curl wget unzip file firefox
             ];
 
             # Configure basic settings
